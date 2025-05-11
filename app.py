@@ -45,4 +45,4 @@ async def unlock(interaction: discord.Interaction):
     else:
         await interaction.response.send_message("BAH RIEN LE SALON EST LOCK :()", ephemeral=True)
 
-bot.run('TON_TOKEN_DISCORD')
+bot.run('le token de votre bot')
