@@ -42,7 +42,7 @@ async def lock(interaction: discord.Interaction):
 async def unlock(interaction: discord.Interaction):
     if interaction.user.guild_permissions.manage_channels:
         await interaction.channel.set_permissions(interaction.guild.default_role, send_messages=True)
-        await interaction.response.send_message("Le canal est maintenant déverrouillé.", ephemeral=True)
+        await interaction.response.send_message("Le salon est maintenant déverrouillé.", ephemeral=True)
     else:
         await interaction.response.send_message("BAH RIEN LE SALON EST LOCK :()", ephemeral=True)
 
