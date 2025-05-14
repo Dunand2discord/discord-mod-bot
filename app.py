@@ -9,7 +9,8 @@ bot = commands.Bot(command_prefix='/', intents=intents)
 
 @bot.event
 async def on_ready():
-    print(f'{bot.user} est en ligne')
+    await tree.sync()
+    print(f"Connecté en tant que {bot.user}")
 
 @bot.tree.command(name="ban", description="Ban un membre du srv")
 @app_commands.describe(member="Le membre à ban", reason="Raison du ban")
